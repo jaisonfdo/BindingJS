@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    tools:context="com.droidmentor.bindingjs.ShoppingActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image1"
+        android:layout_above="@+id/footerView"
+        android:scaleType="fitCenter" />
+
+    <RelativeLayout
+        android:id="@+id/footerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/items_padding"
+            android:gravity="center"
+            android:text="@string/sampleTitle"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/medium_text" />
+
+        <RelativeLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="@dimen/items_inbetween"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/items_padding"
+                android:gravity="center"
+                android:text="@string/samplePrice"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimaryDark"
+                android:textSize="@dimen/medium_text" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceLayout"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/items_inbetween"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/bg_addcart"
+            android:text="@string/addToCart"
+            android:textColor="@color/colorCTAText"
+            android:textSize="@dimen/large_text" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
